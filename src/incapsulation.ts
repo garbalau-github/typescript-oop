@@ -7,6 +7,14 @@ class Rectangle {
     this._height = height;
   }
 
+  get width() {
+    return this._width;
+  }
+
+  set width(value) {
+    value <= 0 ? (this._width = 1) : (this._width = value);
+  }
+
   calcArea() {
     return this._width * this._height;
   }
@@ -18,6 +26,9 @@ class Rectangle {
 
 const rect = new Rectangle(10, 5);
 
-// We have access to methods only
-console.log(rect.calcArea()); // 30
-console.log(rect.calcPerimeter()); // 50
+// From get
+console.log(rect.width);
+
+// Access to methods
+console.log(rect.calcArea());
+console.log(rect.calcPerimeter());
