@@ -51,6 +51,13 @@ const personObj = new PersonPoly('Travis', 'Scott', 31);
 const employeeObj = new EmployeePoly('Nick', 'Garbalau', 24, 9999);
 const developerObj = new DeveloperPoly('Anastasia', 'Martiniuc', 21, 99999, 'Junior');
 // Everyone has access to .greeting() method
-console.log(personObj.greeting());
-console.log(employeeObj.greeting());
-console.log(developerObj.greeting());
+// console.log(personObj.greeting());
+// console.log(employeeObj.greeting());
+// console.log(developerObj.greeting());
+const personList = [personObj, employeeObj, developerObj];
+function massGreeting(persons) {
+    persons.forEach((person) => {
+        console.log(person.greeting());
+    });
+}
+massGreeting(personList);
